@@ -320,7 +320,6 @@ quoted : context {
 }
 
 quoted_args : context {
-   : include "braced";
    : include "quoted";
    : include "embedded";
    : pattern {
@@ -367,3 +366,4 @@ operator : context {
 }
 
 }
+

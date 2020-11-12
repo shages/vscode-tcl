@@ -54,41 +54,6 @@
         </dict>
        </array>
     </dict>
-    <key>braced</key>
-    <dict>
-      <key>patterns</key>
-      <array> 
-        <dict>
-          <key>begin</key>
-          <string>((?&lt;!\\)\{)</string>
-          <key>beginCaptures</key>
-          <dict>
-            <key>1</key>
-            <dict>
-              <key>name</key>
-              <string>punctuation.tcl</string>
-            </dict>
-          </dict>
-          <key>patterns</key>
-          <array> 
-            <dict>
-              <key>include</key>
-              <string>#braced__1</string>
-            </dict>
-           </array>
-          <key>end</key>
-          <string>(\}([^\s\]]*))</string>
-          <key>endCaptures</key>
-          <dict>
-            <key>1</key>
-            <dict>
-              <key>name</key>
-              <string>punctuation.tcl</string>
-            </dict>
-          </dict>
-        </dict>
-       </array>
-    </dict>
     <key>braced__1</key>
     <dict>
       <key>patterns</key>
@@ -291,7 +256,7 @@
         </dict>
         <dict>
           <key>match</key>
-          <string>(^\s*\S+|(?:(?&lt;=[^\x{005c}]\[)[^\s\]]++(?!\])))</string>
+          <string>(^\s*\S+|(?:(?&lt;=[^\x{005c}]\[)[^\s\]]+(?!\])))</string>
           <key>name</key>
           <string>keyword.tcl</string>
           <key>comment</key>
@@ -451,10 +416,6 @@
     <dict>
       <key>patterns</key>
       <array> 
-        <dict>
-          <key>include</key>
-          <string>#braced</string>
-        </dict>
         <dict>
           <key>include</key>
           <string>#quoted</string>
@@ -637,3 +598,4 @@
   </dict>
 </dict>
 </plist>
+
